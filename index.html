@@ -5,21 +5,27 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Calculadora de Calorias</h1>
-    <form id="calorie-form">
-        <label for="speed">Velocidade (km/h):</label><br>
-        <input type="number" id="speed" name="speed"><br>
-        <label for="weight">Peso (kg):</label><br>
-        <input type="number" id="weight" name="weight"><br>
-        <label for="time">Tempo (min):</label><br>
-        <input type="number" id="time" name="time"><br>
-        <input type="button" value="Calcular" onclick="calculateCalories()">
-    </form>
-    <p id="result"></p>
-    <h2>Metodologia</h2>
-    <p>Esta calculadora usa a seguinte fórmula para estimar a quantidade de calorias queimadas durante o exercício: Velocidade (km/h) * Peso (kg) * 0,0175 * Tempo (min).</p>
-    <h2>Informações Adicionais</h2>
-    <p>Por favor, note que esta é uma estimativa e o número real de calorias queimadas pode variar dependendo de muitos fatores, incluindo a sua taxa metabólica basal, a intensidade do exercício, e mais. Para uma estimativa mais precisa, considere consultar um profissional de saúde ou um treinador físico.</p>
+    <div class="container">
+        <h1>Calculadora de Calorias</h1>
+        <div class="calculator">
+            <form id="calorie-form">
+                <label for="speed">Velocidade (km/h):</label><br>
+                <input type="number" id="speed" name="speed"><br>
+                <label for="weight">Peso (kg):</label><br>
+                <input type="number" id="weight" name="weight"><br>
+                <label for="time">Tempo (min):</label><br>
+                <input type="number" id="time" name="time"><br>
+                <input type="button" value="Calcular" onclick="calculateCalories()">
+            </form>
+            <p id="result"></p>
+        </div>
+        <div class="info">
+            <h2>Metodologia</h2>
+            <p>Esta calculadora usa a seguinte fórmula para estimar a quantidade de calorias queimadas durante o exercício: Velocidade (km/h) * Peso (kg) * 0,0175 * Tempo (min).</p>
+            <h2>Informações Adicionais</h2>
+            <p>Por favor, note que esta é uma estimativa e o número real de calorias queimadas pode variar dependendo de muitos fatores, incluindo a sua taxa metabólica basal, a intensidade do exercício, e mais. Para uma estimativa mais precisa, considere consultar um profissional de saúde ou um treinador físico.</p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
