@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Calorias</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Calculadora de Calorias</h1>
+    <form id="calorie-form">
+        <label for="speed">Velocidade (km/h):</label><br>
+        <input type="number" id="speed" name="speed"><br>
+        <label for="weight">Peso (kg):</label><br>
+        <input type="number" id="weight" name="weight"><br>
+        <label for="time">Tempo (min):</label><br>
+        <input type="number" id="time" name="time"><br>
+        <input type="button" value="Calcular" onclick="calculateCalories()">
+    </form>
+    <p id="result"></p>
+    <script src="script.js"></script>
+</body>
+</html>
