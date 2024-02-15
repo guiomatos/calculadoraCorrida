@@ -67,7 +67,7 @@ input[type=button]:hover {
     background-color: #459a8f;
 }
 
-#result {
+#result, #result-distance {
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
@@ -80,6 +80,39 @@ footer {
     margin-top: 20px;
 }
 
+/* Estilos para abas */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
 /* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
     .container {
@@ -88,7 +121,7 @@ footer {
         margin: 0;
     }
 
-    .calculator {
+    .calculator, .tabcontent {
         padding: 10px;
     }
 
@@ -101,7 +134,11 @@ footer {
         margin: 5px 0;
     }
 
-    #result {
+    #result, #result-distance {
         font-size: 1em;
+    }
+
+    .tab button {
+        padding: 10px 12px;
     }
 }
