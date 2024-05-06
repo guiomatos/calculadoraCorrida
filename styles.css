@@ -142,3 +142,27 @@ footer {
         padding: 10px 12px;
     }
 }
+.whatsapp-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e9fff5;  /* Cor de fundo suave */
+}
+
+.contact-photo {
+    width: 100px; /* Ajuste conforme necessário */
+    height: auto;
+    border-radius: 50%; /* Torna a foto circular */
+    margin-right: 20px;
+}
+
+.whatsapp-button {
+    padding: 10px 20px;
+    background-color: #25D366; /* Cor padrão do WhatsApp */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
