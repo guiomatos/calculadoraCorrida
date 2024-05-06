@@ -144,21 +144,28 @@ footer {
 }
 .whatsapp-contact {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
-    background-color: #e9fff5;  /* Cor de fundo suave */
+    background-color: #e9fff5; /* Cor de fundo suave */
+}
+
+.contact-info {
+    text-align: center;
+    max-width: 300px; /* Controla a largura do bloco de contato */
 }
 
 .contact-photo {
-    width: 100px; /* Ajuste conforme necessário */
+    width: 150px; /* Ajuste conforme necessário */
     height: auto;
     border-radius: 50%; /* Torna a foto circular */
-    margin-right: 20px;
+    margin: 20px auto; /* Centraliza a imagem */
 }
 
 .whatsapp-button {
-    padding: 10px 20px;
+    display: block; /* Faz o botão ocupar a largura total do elemento pai */
+    width: 80%; /* Largura do botão */
+    margin: 10px auto; /* Centraliza o botão */
+    padding: 10px;
     background-color: #25D366; /* Cor padrão do WhatsApp */
     color: white;
     text-decoration: none;
