@@ -33,6 +33,23 @@ function calculateCaloriesDistance() {
     document.getElementById('result-distance').innerHTML = "Você queimou aproximadamente " + result.toFixed(2) + " calorias.";
 }
 
+// Função para calcular calorias com base no tempo e distância
+function calculateCaloriesTimeDistance() {
+    var weight = parseFloat(document.getElementById('weight-td').value);
+    var timeMinutes = parseFloat(document.getElementById('time-td').value);
+    var distanceKm = parseFloat(document.getElementById('distance-td').value);
+
+    if (isNaN(weight) || isNaN(timeMinutes) || isNaN(distanceKm) || timeMinutes <= 0) {
+        document.getElementById('result-time-distance').innerHTML = "Por favor, preencha valores válidos (tempo > 0).";
+        return;
+    }
+
+    var timeHours = timeMinutes / 60; // Converter tempo para horas
+    var speed = distanceKm / timeHours; // km/h
+    var result = speed * weight * 0.0175 * timeMinutes; // Fórmula usando tempo em minutos
+    document.getElementById('result-time-distance').innerHTML = "Você queimou aproximadamente " + result.toFixed(2) + " calorias.";
+}
+
 // Ativar a primeira aba por padrão ao carregar a página
 window.onload = function() {
     document.getElementsByClassName('tablinks')[0].click();

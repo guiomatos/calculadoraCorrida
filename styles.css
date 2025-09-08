@@ -67,7 +67,7 @@ input[type=button]:hover {
     background-color: #459a8f;
 }
 
-#result, #result-distance {
+#result, #result-distance, #result-time-distance {
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
@@ -134,7 +134,7 @@ footer {
         margin: 5px 0;
     }
 
-    #result, #result-distance {
+    #result, #result-distance, #result-time-distance {
         font-size: 1em;
     }
 

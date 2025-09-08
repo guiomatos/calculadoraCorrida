@@ -19,18 +19,19 @@
         <h1>Calculadora de Calorias</h1>
         <!-- Adição de um sistema de abas para seleção -->
         <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'CaloriasPorTempo')">Calorias por Tempo</button>
-            <button class="tablinks" onclick="openTab(event, 'CaloriasPorDistancia')">Calorias por Distância</button>
+            <button class="tablinks" onclick="openTab(event, 'CaloriasPorTempo')">Velocidade e Tempo</button>
+            <button class="tablinks" onclick="openTab(event, 'CaloriasPorDistancia')">Velocidade e Distância</button>
+            <button class="tablinks" onclick="openTab(event, 'TempoEDistancia')">Tempo e Distância</button>
         </div>
 
         <!-- Aba de Calorias por Tempo -->
         <div id="CaloriasPorTempo" class="tabcontent">
             <div class="calculator">
                 <form id="calorie-form">
-                    <label for="speed">Velocidade (km/h):</label><br>
-                    <input type="number" id="speed" name="speed"><br>
                     <label for="weight">Peso (kg):</label><br>
                     <input type="number" id="weight" name="weight"><br>
+                    <label for="speed">Velocidade (km/h):</label><br>
+                    <input type="number" id="speed" name="speed"><br>
                     <label for="time">Tempo (min):</label><br>
                     <input type="number" id="time" name="time"><br>
                     <input type="button" value="Calcular" onclick="calculateCalories()">
@@ -43,17 +44,33 @@
         <div id="CaloriasPorDistancia" class="tabcontent">
             <div class="calculator">
                 <form id="calorie-form-distance">
-                    <label for="speed-distance">Velocidade (km/h):</label><br>
-                    <input type="number" id="speed-distance" name="speed"><br>
                     <label for="weight-distance">Peso (kg):</label><br>
                     <input type="number" id="weight-distance" name="weight"><br>
+                    <label for="speed-distance">Velocidade (km/h):</label><br>
+                    <input type="number" id="speed-distance" name="speed"><br>
                     <label for="distance">Distância (km):</label><br>
                     <input type="number" id="distance" name="distance"><br>
                     <input type="button" value="Calcular" onclick="calculateCaloriesDistance()">
                 </form>
                 <p id="result-distance"></p>
             </div>
-        </div class="info">
+        </div>
+
+        <!-- Aba de Calorias por Tempo e Distância -->
+        <div id="TempoEDistancia" class="tabcontent">
+            <div class="calculator">
+                <form id="calorie-form-time-distance">
+                    <label for="weight-td">Peso (kg):</label><br>
+                    <input type="number" id="weight-td" name="weight"><br>
+                    <label for="time-td">Tempo (min):</label><br>
+                    <input type="number" id="time-td" name="time"><br>
+                    <label for="distance-td">Distância (km):</label><br>
+                    <input type="number" id="distance-td" name="distance"><br>
+                    <input type="button" value="Calcular" onclick="calculateCaloriesTimeDistance()">
+                </form>
+                <p id="result-time-distance"></p>
+            </div>
+        </div>
 			<p>Criado por <a href="https://www.instagram.com/manuelasamorim" target="_blank">@manuelasamorim</a></p>
 			<div class="whatsapp-contact">
 				<div class="contact-info">
