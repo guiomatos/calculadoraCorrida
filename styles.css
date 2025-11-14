@@ -213,33 +213,99 @@ footer {
     display: table;
 }
 
-.whatsapp-contact {
+.finance-bridge-card {
     display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 24px;
+    margin: 30px 0;
+    background: linear-gradient(135deg, #ffffff, #e9f8f6);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.finance-bridge-card__icon {
+    flex: 0 0 140px;
+    aspect-ratio: 1 / 1;
+    background: #d5f2ee;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 20px;
-    background-color: #e9fff5; /* Cor de fundo suave */
 }
 
-.contact-info {
+.finance-bridge-card__icon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.finance-bridge-card__content h2 {
+    margin: 8px 0 12px;
+    font-size: 1.4em;
+    color: #24423e;
+}
+
+.finance-bridge-card__content {
+    flex: 1;
     text-align: center;
-    max-width: 300px; /* Controla a largura do bloco de contato */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact-photo {
-    width: 150px; /* Ajuste conforme necessário */
-    height: auto;
-    border-radius: 50%; /* Torna a foto circular */
-    margin: 20px auto; /* Centraliza a imagem */
+.finance-bridge-card__content p {
+    margin: 0 0 16px;
+    line-height: 1.5;
 }
 
-.whatsapp-button {
-    display: block; /* Faz o botão ocupar a largura total do elemento pai */
-    width: 80%; /* Largura do botão */
-    margin: 10px auto; /* Centraliza o botão */
-    padding: 10px;
-    background-color: #25D366; /* Cor padrão do WhatsApp */
-    color: white;
+.finance-bridge-card__eyebrow {
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.08em;
+    color: #2f6f66;
+    margin: 0;
+}
+
+.finance-bridge-card__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #2f6f66;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 999px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.finance-bridge-card__cta::after {
+    content: "↗";
+    font-size: 1.1em;
+}
+
+.finance-bridge-card__cta:hover,
+.finance-bridge-card__cta:focus {
+    background-color: #1f5049;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .finance-bridge-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .finance-bridge-card__icon {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .finance-bridge-card__cta {
+        width: 100%;
+    }
 }
